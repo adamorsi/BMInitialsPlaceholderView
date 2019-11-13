@@ -78,4 +78,6 @@
  */
 -(void)batchUpdateViewWithInitials:(NSString *)initials circleColor:(UIColor *)circleColor textColor:(UIColor *)textColor font:(UIFont *)font;
 
+- (UIImage *)image;
+
 @end

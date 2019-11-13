@@ -176,5 +176,16 @@
     [self setNeedsDisplay];
 }
 
+- (UIImage *)image
+{
+    UIGraphicsBeginImageContext(self.bounds.size);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    return img;
+}
 
 @end
